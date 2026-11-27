@@ -1,0 +1,16 @@
+{
+  "cadastro": {
+    "nome": "Ana Julia Teste",
+    "emailBase": "anajulia.teste",
+    "dominio": "@usp.br",
+    "area": "Engenharias",
+    "instituicao": "USP",
+    "lattes": "http://lattes.cnpq.br/1234567890123456",
+    "senha": "Teste@123"
+  },
+  "login": {
+    "email": "ana.costa@usp.br",
+    "senha": "12345678",
+    "nome": "Ana Costa"
+  }
+}

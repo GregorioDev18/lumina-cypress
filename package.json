@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "teste": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "test:ana": "npx cypress run --spec cypress/e2e/caso64_cadastro_sucesso.cy.js,cypress/e2e/caso65_login_sucesso.cy.js"
   },
   "keywords": [],
   "type": "commonjs",
