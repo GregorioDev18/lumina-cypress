@@ -2,7 +2,7 @@
 // Seguindo o padrão da Aula 09: a função só executa as ações;
 // as Assertions ficam no próprio Caso de Teste.
 
-import { cadastro, login } from './selectors';
+import { cadastro, login, adminTags } from './selectors';
 
 // Preenche e envia o formulário de cadastro (perfil Pesquisadora)
 Cypress.Commands.add('cadastrarPesquisadora', (usuario) => {
@@ -23,4 +23,16 @@ Cypress.Commands.add('fazerLogin', (email, senha) => {
   cy.get(login.email).type(email);
   cy.get(login.senha).type(senha, { log: false });
   cy.get(login.botaoEntrar).click();
+});
+
+
+// Abre a aba "Tags de atuação" no painel do administrador
+Cypress.Commands.add('abrirTagsDeAtuacao', () => {
+  cy.contains(adminTags.menu, 'Tags de atuação').click();
+});
+
+// Preenche o nome da nova tag e clica em "Adicionar"
+Cypress.Commands.add('adicionarTag', (nome) => {
+  cy.get(adminTags.campoNovaTag).clear().type(nome);
+  cy.contains(adminTags.botaoAdicionar, 'Adicionar').click();
 });
